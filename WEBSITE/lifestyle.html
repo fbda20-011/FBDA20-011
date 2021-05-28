@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About San Diego</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+     <!-- scroll button -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function(){
+      $(window).scroll(function(){
+        if($(window).scrollTop() > 300){
+          $('i').css({
+            "opacity":"1", "pointer-events":"auto"
+          });
+        }else{
+          $('i').css({
+            "opacity":"0", "pointer-events":"none"
+          });
+        }
+      });
+      $('i').click(function(){
+        $('html').animate({scrollTop:0}, 500);
+      });
+    });
+    </script>
+
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+     
+          <div class="logo"><a href="#">San Diego</a></div>
+      
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="current" href="lifestyle.html">Lifestyle</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="connect with us.html">Connect with us</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+    <div class="scroll">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+
+   <div class="entertainmentbanner">
+      <div class="container">
+        <h2>Entertainment in San Diego</h2>
+      </div>
+   </div>
+
+     <div class="entertainment-categories">
+
+      <h2>San Diego Art & Culture, Galleries, Exhibits & Museums</h2>
+      <p>Find the best San Diego art galleries, exhibits and museums. Art appreciation abounds in San Diego, from the European masterpieces on display at the Museum of Art in Balboa Park, to the whimsical sculpture garden at the Museum of Contemporary Art in La Jolla. In North County, the Oceanside Museum of Art presents provocative, contemporary exhibits from the region and around the world. All of these cultural jewels offer concerts, films, lectures and docent tours. Don’t miss the opportunity to tour these stunning venues.</p>
+      
+      <h2>Music & Concerts in San Diego</h2>
+      <p>Music concerts in San Diego will rock your world. Venues of every shape and size attract fans with eclectic tastes. Some stages have a rock ‘n' roll vibe like the Casbah or House of Blues or SOMA, while others cater to the classic music listener, like patrons found at the San Diego Symphony. For a mix of shows and types of audiences, the Belly Up Tavern in Solana Beach has a relaxed atmosphere with high-quality acoustics.</p>
+
+      <h2>Live Theatre in San Diego</h2>
+      <p>Find the best live theatre in San Diego! San Diego’s legendary theatre venues include the San Diego Civic Theatre, bringing Broadway hits, music acts and comedy to the stage. San Diego is also home to the the Horton Grand Theatre in the Gaslamp Quarter. It boasts great views from every seat in the house, and gives you plenty of options within walking distance for dining before and after your show.</p>
+      
+      <p>Shakespeare is the focus of the San Diego Old Globe Theatre in Balboa Park. The Old Globe stages a huge festival dedicated to The Bard’s plays every year. Still other playhouses include the lovely Lamb’s Players Theatre in Coronado and downtown San Diego, and prestigious North Coast Repertory Theatre in Solana Beach. In Vista, you'll find the outdoor amphitheatre famous for it's summer Broadway musicals performed under the stars! It's a must see!</p>  
+    </div>
+
+
+      <div class="tourist-attractions">
+        <h2>Tourist attractions in San Diego</h2>
+        <p>San Diego has many attractions ranging from the fascinating animal encounters at the world well known San Diego Zoo to the waterfront shopping area of Seaport Village. Every person regardless of age and interest can surely be fascinated by the beauty of San Diego. This city’s attractions can surely make your vacation unforgettable.</p>
+      </div>
+
+
+
+      <div class = "main-container">
+            <h2>Tourist attractions Categories</h2>
+            <p>Explore San Diego's fascinating attractions.</p>
+            <div class = "filter-container">
+                <div class = "category-head">
+                    <ul>
+                        <div class = "category-title active" id = "all">
+                            <li>All</li>
+                            <span><i class = "fas fa-border-all"></i></span>
+                        </div>
+                        <div class = "category-title" id = "culture">
+                            <li>Culture</li>
+                            <span><i class = "fas fa-theater-masks"></i></span>
+                        </div>
+                        <div class = "category-title" id = "beaches">
+                            <li>Beaches</li>
+                            <span><i class = "fas fa-umbrella-beach"></i></span>
+                        </div>
+                        <div class = "category-title" id = "local-favourites">
+                            <li>Local favourites</li>
+                            <span><i class = "fas fa-chart-area"></i></span>
+                        </div>
+                        <div class = "category-title" id = "museums">
+                            <li>Museums</li>
+                            <span><i class = "fas fa-monument"></i></span>
+                        </div>
+                        <div class = "category-title" id = "sports">
+                            <li>Sports</li>
+                            <span><i class = "fas fa-running"></i></span>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class = "posts-collect">
+                    <div class = "posts-main-container">
+                        <!-- single post -->
+                        <div class = "all local-favourites">
+                            <div class = "post-img">
+                                <img src = "images/zoo.jpg"  alt = "post">
+                                <span class = "category-name">Local favourites</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>San Diego Zoo</h2>
+                                <p>The San Diego Zoo is a world-famous wildlife park and floral garden that is a must-see in Southern California. It's a wonderful place for families to engage with animals and plants, and become wildlife allies, with over 12,000 rare and endangered animals—including koalas, polar bears, penguins, gorillas, and more—up-close interactions and a wild and entertaining atmosphere.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all local-favourites">
+                            <div class = "post-img">
+                                <img src = "images/coronado island.jpg" alt = "post">
+                                <span class = "category-name">Local favourites</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Coronado Island</h2>
+                                <p>Known for its gorgeous beaches, Coronado Island offers a plethora of choices for fun in the sun. Coronado Central Beach, Coronado Dog Beach, Glorietta Bay Beach, Silver Strand State Beach, and the Ferry Landing Marketplace are among the five white sand beaches on the island.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all local-favourites">
+                            <div class = "post-img">
+                                <img src = "images/balboa.jpg" alt = "post">
+                                <span class = "category-name">Local favourites</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Balboa Park</h2>
+                                <p>Balboa Park is home to more than 16 museums, several performing arts theaters, magnificent gardens, pathways, and many other artistic and recreational activities, including the San Diego Zoo, where culture, science, and nature converge.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all culture">
+                            <div class = "post-img">
+                                <img src = "images/monument.jpg" alt = "post">
+                                <span class = "category-name">culture</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Cabrillo Monument</h2>
+                                <p>Cabrillo National Monument is at the southern tip of the Point Loma Peninsula in San Diego, California, United States. It commemorates the landing of Juan Rodríguez Cabrillo at San Diego Bay on September 28, 1542.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all culture">
+                            <div class = "post-img">
+                                <img src = "images/old-town.jpg" alt = "post">
+                                <span class = "category-name">culture</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Old Town State Historical Park</h2>
+                                <p>The Old Town State Historical Park maintains a collection of 19th-century homes and businesses that provide a glimpse into colonial life in San Diego. Seek out the old adobe ranch homes, schoolhouse and graveyard spread among the occupied areas of the neighborhood. Kit Carson was among the first pioneers to raise the American flag here in 1846. There are also numerous rumors of ghost sightings in the area—most persistently at the old Whaley House Museum on San Diego Avenue.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all culture">
+                            <div class = "post-img">
+                                <img src = "images/mission-basilica.jpg" alt = "post">
+                                <span class = "category-name">culture</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Mission Basilica San Diego de Alcala</h2>
+                                <p>Mission Basilica San Diego de Alcalá was the first Franciscan mission in The Californias, a province of New Spain. Located in present-day San Diego, California, it was founded on July 16, 1769, by Spanish friar Junípero Serra in an area long inhabited by the Kumeyaay people</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all culture">
+                            <div class = "post-img">
+                                <img src = "images/pointloma.jpg" alt = "post">
+                                <span class = "category-name">culture</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Old Point Loma Lighthouse</h2>
+                                <p>The original Point Loma Lighthouse is a historic lighthouse located on the Point Loma peninsula at the mouth of San Diego Bay in San Diego, California. It is situated in the Cabrillo National Monument. It is no longer in operation as a lighthouse but is open to the public as a museum.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all beaches">
+                            <div class = "post-img">
+                                <img src = "images/la-jolla-cove.png" alt = "post">
+                                <span class = "category-name">beaches</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>La Jolla Cove</h2>
+                                <p>La Jolla Cove is a small, picturesque cove and beach that is surrounded by cliffs in La Jolla, San Diego, California. The Cove is protected as part of a marine reserve; underwater it is very rich in marine life, and is popular with snorkelers, swimmers and scuba divers.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all beaches">
+                            <div class = "post-img">
+                                <img src = "images/la-jolla-beach.jpg" alt = "post">
+                                <span class = "category-name">beaches</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>La Jolla Shores Beach</h2>
+                                <p>La Jolla Shores is a mile-long crescent of prime sand beach favored by active beachgoers of all interests. Anchored by the Scripps Institute of Oceanography pier, this is a busy swimming area popular among families and surfers alike. Shielded by La Jolla Bay, it is also used as a launching ground for scuba diving and kayaking. At night it's alive with the glow of beach fires</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all beaches">
+                            <div class = "post-img">
+                                <img src = "images/mission-beach.jpg" alt = "post">
+                                <span class = "category-name">beaches</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Mission Beach</h2>
+                                <p>Mission Beach (the beach) is a long wide sandy beach in the Mission Beach area of San Diego. The beaches here are continuous, but Mission Beach is typically considered the beach south of Pacific Beach Drive.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all museums">
+                            <div class = "post-img">
+                                <img src = "images/museum-of-art.jpg" alt = "post">
+                                <span class = "category-name">museums</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Museum of Art</h2>
+                                <p>The San Diego Museum of Art’s mission is to inspire, educate, and cultivate curiosity through great works of art. The museum regularly features major exhibitions from around the world, bringing new works of art to San Diego, as well as sharing our holdings and exhibitions with audiences around the globe.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all museums">
+                            <div class = "post-img">
+                                <img src = "images/timken.jpg" alt = "post">
+                                <span class = "category-name">museums</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Timken Museum of Art</h2>
+                                <p>The Timken Museum of Art is a fine art museum, established in 1965 and located at 1500 El Prado in Balboa Park in San Diego, California, close to the San Diego Museum of Art. It is the only Balboa Park museum with free admission..</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all museums">
+                            <div class = "post-img">
+                                <img src = "images/museum-of-man.jpg" alt = "post">
+                                <span class = "category-name">museums</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Museum of man</h2>
+                                <p>Situated just beneath the magnificent 200-foot California Tower, the museum is dedicated to anthropology, arts, culture and scientific achievements. The world-famous Museum of Man is the only museum of its kind in the area. Permanent collections like the Maya monuments and the Children’s Discovery Center delight visitors of every age.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all museums">
+                            <div class = "post-img">
+                                <img src = "images/natural-history-museum.jpg" alt = "post">
+                                <span class = "category-name">museums</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>San Diego Natural History Museum</h2>
+                                <p>The San Diego Natural History Museum is a museum located in Balboa Park in San Diego, California. It was founded in 1874 as the San Diego Society of Natural History. It is the second oldest scientific institution west of the Mississippi and the oldest in Southern California.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        
+                        <!-- single post -->
+                        <div class = "all sports">
+                            <div class = "post-img">
+                                <img src = "images/torrey-pines.jpg" alt = "post">
+                                <span class = "category-name">sports</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Torrey Pines Golf Course</h2>
+                                <p>Torrey Pines Golf Course is a 36-hole municipal public golf facility on the west coast of the United States, owned by the city of San Diego, California. It sits on the coastal cliffs overlooking the Pacific Ocean in the community of La Jolla, just south of Torrey Pines State Reserve</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- JS Script -->
+
+        <script>
+            const categoryTitle = document.querySelectorAll('.category-title');
+const allCategoryPosts = document.querySelectorAll('.all');
+
+for(let i = 0; i < categoryTitle.length; i++){
+    categoryTitle[i].addEventListener('click', filterPosts.bind(this, categoryTitle[i]));
+}
+
+function filterPosts(item){
+    changeActivePosition(item);
+    for(let i = 0; i < allCategoryPosts.length; i++){
+        if(allCategoryPosts[i].classList.contains(item.attributes.id.value)){
+            allCategoryPosts[i].style.display = "block";
+        } else {
+            allCategoryPosts[i].style.display = "none";
+        }
+    }
+}
+
+function changeActivePosition(activeItem){
+    for(let i = 0; i < categoryTitle.length; i++){
+        categoryTitle[i].classList.remove('active');
+    }
+    activeItem.classList.add('active');
+};
+
+        </script>
+        
+    </body>
+</html>
+
+<footer>
+        <div class="main-content">
+        <div class="left box">
+          <h2>Quick Links</h2>
+          <div class="content">
+           <a href="about.html">About</a>
+           <a href="lifestyle.html">Lifestyle</a>
+           <a href="events.html">Events</a>
+           <a href="connect with us">Connect With Us</a>
+
+            <div class="social">
+              <a href="#"><span class="fab fa-facebook-f"></span></a>
+              <a href="#"><span class="fab fa-twitter"></span></a>
+              <a href="#"><span class="fab fa-instagram"></span></a>
+              <a href="#"><span class="fab fa-youtube"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="center box">
+          <h2>Contact us</h2>
+          <div class="content">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">San Diego</span>
+            </div>
+            <div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">+089-765432100</span>
+            </div>
+            <div class="email">
+              <span class="fas fa-envelope"></span>
+              <span class="text">sandiego@california.com</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="right box">
+          <h2>Our Newsletter</h2>
+          <div class="content">
+            <form action="connect with us.html">
+              <div class="email">
+                <div class="text">Email *</div>
+                <input type="email" required>
+              </div>
+              <div class="country">
+                <div class="text">Country *</div>
+                <input type="text" required>
+              </div>
+              <div class="buttn">
+                <button type="submit">Complete</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <center>
+          <span class="credit">Created By <a href="index.html">San Diego</a> | </span>
+          <span class="far fa-copyright"></span><span> 2020 All rights reserved.</span>
+        </center>
+      </div>
+         
+            
+         
+      </footer>

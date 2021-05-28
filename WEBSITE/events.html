@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About San Diego</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+     <!-- scroll button -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function(){
+      $(window).scroll(function(){
+        if($(window).scrollTop() > 300){
+          $('i').css({
+            "opacity":"1", "pointer-events":"auto"
+          });
+        }else{
+          $('i').css({
+            "opacity":"0", "pointer-events":"none"
+          });
+        }
+      });
+      $('i').click(function(){
+        $('html').animate({scrollTop:0}, 500);
+      });
+    });
+    </script>
+
+
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+     
+          <div class="logo"><a href="#">San Diego</a></div>
+      
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="lifestyle.html">Lifestyle</a></li>
+        <li><a class="current" href="events.html">Events</a></li>
+        <li><a href="connect with us.html">Connect with us</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+
+
+   <div class="scroll">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+
+  <div class="events-pg">
+
+      <h2>San Diego Art & Culture, Galleries, Exhibits & Museums</h2>
+      <p>Find the best San Diego art galleries, exhibits and museums. Art appreciation abounds in San Diego, from the European masterpieces on display at the Museum of Art in Balboa Park, to the whimsical sculpture garden at the Museum of Contemporary Art in La Jolla. In North County, the Oceanside Museum of Art presents provocative, contemporary exhibits from the region and around the world. All of these cultural jewels offer concerts, films, lectures and docent tours. Don’t miss the opportunity to tour these stunning venues.</p>
+
+
+
+
+       <div class = "main-container">
+            <h2>Events Categories</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, velit.</p>
+            <div class = "filter-container">
+                <div class = "category-head">
+                    <ul>
+                        <div class = "category-title active" id = "all">
+                            <li>All</li>
+                            <span><i class = "fas fa-border-all"></i></span>
+                        </div>
+                        <div class = "category-title" id = "art">
+                            <li>Art</li>
+                            <span><i class = "fas fa-theater-masks"></i></span>
+                        </div>
+                        <div class = "category-title" id = "food">
+                            <li>Food</li>
+                            <span><i class = "fas fa-umbrella-beach"></i></span>
+                        </div>
+                        <div class = "category-title" id = "entertainment">
+                            <li>Entertainment</li>
+                            <span><i class = "fas fa-chart-area"></i></span>
+                        </div>
+                        <div class = "category-title" id = "sports">
+                            <li>Sports</li>
+                            <span><i class = "fas fa-monument"></i></span>
+                        </div>
+                        <div class = "category-title" id = "upcoming">
+                            <li>Upcoming</li>
+                            <span><i class = "fas fa-running"></i></span>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class = "posts-collect">
+                    <div class = "posts-main-container">
+                        <!-- single post -->
+                        <div class = "all food">
+                            <div class = "post-img">
+                                <img src = "images/little-italy.jpg"  alt = "post">
+                                <span class = "event-date">29 MAY</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Little Italy Mercato Farmers' Market</h2>
+                                <p>This farmer's market in Little Italy offers an array of groceries and goodies. Featured items include fresh fruits and vegetables, flowers, meat, nuts, sauces, bakery, dry goods, prepared foods, and specialty treats. There are also gift items and craft creations..</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all food">
+                            <div class = "post-img">
+                                <img src = "images/city-heights.jpg" alt = "post">
+                                <span class = "event-date">29 MAY</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>City Heights Farmers' Market</h2>
+                                <p>This farmer's market in City Heights offers an array of groceries and goodies. Featured items include fresh fruits and vegetables, bakery, dry goods, prepared foods, and specialty treats. There are also imported items from Latin America, East Africa, and Southwest Asia..</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all food">
+                            <div class = "post-img">
+                                <img src = "images/hillcrest.jpg" alt = "post">
+                                <span class = "event-date">30 MAY</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Hillcrest Farmers Market</h2>
+                                <p>This farmer's market in Hillcrest offers an array of groceries and goodies. Featured items include fresh fruits and vegetables, meat, seafood, dairy products, dry goods, prepared foods, and specialty treats. There are also art & craft items, jewelry, and clothing.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all food">
+                            <div class = "post-img">
+                                <img src = "images/restaurant-week.jpg" alt = "post">
+                                <span class = "event-date">JAN</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>San Diego Restaurant Week</h2>
+                                <p>Kick off your New Year with food, fun, and memories at the San Diego Restaurant Week in January. With more than 180 participating restaurants to choose from across every neighborhood in San Diego County, diners can be assured that appetites will be appeased and cravings will be satisfied with prix-fixe two course lunches and three course dinners..</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all art">
+                            <div class = "post-img">
+                                <img src = "images/museum-month.jpg" alt = "post">
+                                <span class = "event-date">FEB</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>San Diego Museum Month</h2>
+                                <p>Arts, entertainment and culture collide for Macy’s Museum Month in San Diego. The San Diego Museum Council and Macy's have teamed up for Museum Month, giving patrons a chance to discover what's new at more than 40 area museums with savings only seen once a year. Pick up a Museum Month Pass at any area Macy's store to enjoy half-off admission to all of the participating museums through the entire month of February.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all entertainment">
+                            <div class = "post-img">
+                                <img src = "images/county.jpg" alt = "post">
+                                <span class = "event-date">JUNE-JULY</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>San Diego County Fair</h2>
+                                <p>San Diego's annual county fair is the largest fair in California, offering a variety of food, entertainment, exhibits, rides & games throughout the beautiful and historical Del Mar Fairgrounds in the oceanfront village of Del Mar.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all upcoming">
+                            <div class = "post-img">
+                                <img src = "images/july4.jpg" alt = "post">
+                                <span class = "event-date">04 JULY</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>4th of July</h2>
+                                <p>Whether you're traveling with friends or family, San Diego is everyone's first choice for 4th of July celebrations. Even locals can't think of anything better than relaxing with loved ones on a long stretch of sand and watching an extraordinary show of lights in the sky. Below is a list of our favorite stretches of sand, spectacular fireworks shows around and places to watch the fireworks in San Diego.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all entertainment">
+                            <div class = "post-img">
+                                <img src = "images/racing.jpg" alt = "post">
+                                <span class = "event-date">JULY-SEP</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Del Mar Racing Season</h2>
+                                <p>San Diego horse racing takes place where the "turf meets the surf" at the Del Mar Racetrack when fans flock to the track to wager on their favorite horses. Be part of the magic and nostalgia</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all upcoming">
+                            <div class = "post-img">
+                                <img src = "images/miramar.jpg" alt = "post">
+                                <span class = "event-date">SEPTEMBER</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Miramar Air Show</h2>
+                                <p>Experience an amazing lineup of more than 100 military and civilian performers, including the world famous U.S. Navy Blue Angels for what is sure to be a thrilling performance, plus simulation rides, fun for the kids, and a variety of delicious food and beverage offerings. Held at Marine Corps Air Station Miramar, this three-day event is the largest military air show in the U.S.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all upcoming">
+                            <div class = "post-img">
+                                <img src = "images/wine.jpg" alt = "post">
+                                <span class = "event-date">NOVEMBER</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>San Diego Bay Wine + Food Festival</h2>
+                                <p>Welcome to the San Diego Bay Wine + Food Festival, where sailboats and sandy beaches serve as the backdrop to one of the country’s most talked about weeks in food. Featuring dozens of events, hundreds of domestic and international wineries, the celebration of craft beer and spirits, local culinary legends and nationally recognized celebrities, and a Grand Tasting Finale on the stunning Embarcadero.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all art">
+                            <div class = "post-img">
+                                <img src = "images/wonderfront.jpg" alt = "post">
+                                <span class = "event-date">NOVEMBER</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Wonderfront Music & Arts Festival</h2>
+                                <p>A highly-anticipated 7+ stage, 95+ bands, 3-day music, culinary and arts festival will descend upon the stunning waterfront of downtown San Diego from Broadway Pier to the Embarcadero Parks. The festival offers diverse attractions including yacht parties, water sports, art installations, after-parties, a craft beer village and plenty of local flavors.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all sports">
+                            <div class = "post-img">
+                                <img src = "images/carlsbad.jpg" alt = "post">
+                                <span class = "event-date">23 JANUARY</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Carlsbad San Diego Marathon and Half-Marathon</h2>
+                                <p>The second-oldest marathon on the U.S. West Coast also features a Kids’ Marathon Mile the day before the big race, as well as a Health and Fitness Expo.</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all festival">
+                            <div class = "post-img">
+                                <img src = "images/latino.jpg" alt = "post">
+                                <span class = "event-date">10-20 MARCH</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>18th Annual San Diego Latino Film Festival</h2>
+                                <p>San Diego’s proximity to Mexico makes it a natural venue for this prestigious film festival, focusing on works by Latinos or about the Latino experience, held at the UltraStar Cinemas at Hazard Center in Mission Valley</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        <!-- single post -->
+                        <div class = "all festival">
+                            <div class = "post-img">
+                                <img src = "images/stpatrick.jpg" alt = "post">
+                                <span class = "event-date">12 MARCH</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Annual St. Patrick’s Day Parade and Festival.</h2>
+                                <p>'Tis the luck of the Irish for San Diego when the St. Patrick’s Day Parade sets off from Juniper and 6th Street by Balboa Park. An Irish festival with traditional dancers, music, a beer garden and Celtic village follows the parade</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                        
+                        <!-- single post -->
+                        <div class = "all art">
+                            <div class = "post-img">
+                                <img src = "images/federal.jpg" alt = "post">
+                                <span class = "event-date">30 APRIL-01 MAY</span>
+                            </div>
+
+                            <div class = "post-content">
+                                <div class = "post-content-top">
+                                </div>
+                                <h2>Mission Federal ArtWalk</h2>
+                                <p>This free visual and performing arts celebration takes place in downtown San Diego’s colorful Little Italy neighborhood and is the largest art event in San Diego</p>
+                            </div>
+                            <button type = "button" class = "read-btn">Read All</button>
+                        </div>
+                        <!-- end of single post -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- JS file -->
+        <script src = "script.js"></script>
+    </body>
+</html>
+
+
+       <footer>
+        <div class="main-content">
+        <div class="left box">
+          <h2>Quick Links</h2>
+          <div class="content">
+           <a href="about.html">About</a>
+           <a href="lifestyle.html">Lifestyle</a>
+           <a href="events.html">Events</a>
+           <a href="connect with us">Connect With Us</a>
+
+            <div class="social">
+              <a href="#"><span class="fab fa-facebook-f"></span></a>
+              <a href="#"><span class="fab fa-twitter"></span></a>
+              <a href="#"><span class="fab fa-instagram"></span></a>
+              <a href="#"><span class="fab fa-youtube"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="center box">
+          <h2>Contact us</h2>
+          <div class="content">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">San Diego</span>
+            </div>
+            <div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">+089-765432100</span>
+            </div>
+            <div class="email">
+              <span class="fas fa-envelope"></span>
+              <span class="text">sandiego@california.com</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="right box">
+          <h2>Our Newsletter</h2>
+          <div class="content">
+            <form action="connect with us.html">
+              <div class="email">
+                <div class="text">Email *</div>
+                <input type="email" required>
+              </div>
+              <div class="country">
+                <div class="text">Country *</div>
+                <input type="text" required>
+              </div>
+              <div class="buttn">
+                <button type="submit">Complete</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <center>
+          <span class="credit">Created By <a href="index.html">San Diego</a> | </span>
+          <span class="far fa-copyright"></span><span> 2020 All rights reserved.</span>
+        </center>
+      </div>
+         
+            
+         
+      </footer>

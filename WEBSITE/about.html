@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About San Diego</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- scroll button -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      $(document).ready(function(){
+      $(window).scroll(function(){
+        if($(window).scrollTop() > 300){
+          $('i').css({
+            "opacity":"1", "pointer-events":"auto"
+          });
+        }else{
+          $('i').css({
+            "opacity":"0", "pointer-events":"none"
+          });
+        }
+      });
+      $('i').click(function(){
+        $('html').animate({scrollTop:0}, 500);
+      });
+    });
+    </script>
+
+
+
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+     
+          <div class="logo"><a href="#">San Diego</a></div>
+      
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="current" href="about.html">About</a></li>
+        <li><a href="lifestyle.html">Lifestyle</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="connect with us.html">Connect with us</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+    <div class="scroll">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+   <div class="history">
+    <div class="textBox">
+      <div class="title">Learn more about California's finest city</div>
+      <p>San Diego, California's largest city, is situated on the Pacific Ocean in San Diego Bay, just north of Mexico's international border and 120 miles south of Los Angeles. The city is divided into two halves, one of which stretches to the north-east of San Diego Bay and the other of which stretches to the south-east from the bay to the Mexican border. San Diego is the second most populous city in California, after Los Angeles, with a population of 1.54 million.</p>
+    </div>
+
+        <img src="images/historic.jpg"  alt="historic image of San diego"> 
+      </div>
+
+      <div class="foundation">
+         <h2>Foundation</h2>
+        <p >The location was originally seen by a European named Juan Rodriguez Cabrillo from Spain. Cabrillo led a journey around the California coast in 1542, and set off from La Navidad, Mexico, in June of the same year. Cabrillo arrived in San Diego Bay in September and moored. However, the tale of San Diego begins in 1769, when the Spanish established a line of missions across California, followed by Mexico's independence in 1821 and the United States of America's acquisition of California in 1846.</p>
+
+         <h2>Early 19th century</h2>
+        <p>In 1850 San Diego only had a population of about 500 and was incorporated. San Diego grew slowly, with the construction of the Colorado House in 1851, the old Point Loma Lighthouse in 1855, and the Whaley House in 1856. It was California's first two-story brick house. San Diego was still a little town in the 1860s, but it grew quickly, eventually becoming a town with a population of 2300. Around the year 1870, a number of notable structures were built and opened, including the Llewelyn Building, Villa Montezuna, Yuma Building, and the Louis Bank of Commerce.</p>
+
+
+          <h2>20th Century</h2>
+        <p> Around the 20th century  San Diego became a major US naval base. However on July 1905 a boiler explosion occured and the incident led to the death of 66 men and many others had injuries .In 1915 San Diego held the Panama-California Exposition and the California-Pacific International Exposition in 1936.On this century ,the population of San Diego increased ,by 1940 it was 203 000.Meanwhile in 1948, the Maritime Museum was founded and a new public library was built, followed by the Timken Museum of Art which was opened in 1965.The San Diego Coronado Bay Bridge opened in 1969.</p>
+
+
+          <h2>21st Century</h2>
+        <p>San Diego continued to grow, and by 1970, it had a population of 696, 000 people. As the years passed, more advancements were made. In the twenty-first century, more and more developments occurred, and the population rose as well; in 2017, San Diego's population was 1.4 million. Tourism and defense are the city's main industries. San Diego is now the second largest city in California, with a population of over one million people.</p>
+
+      </div>
+
+      <div class="attractions">
+        <h2>San Diego's fascinating attractions</h2>
+        <p>America’s Finest City showcases many popular attractions for the whole family to enjoy. Sea World San Diego, LEGOLAND California, the world-famous San Diego Zoo, the Cabrillo National Monument, Balboa Park, multiple casinos, and other historic parks and museums are just a few of them.Another draw to San Diego is its proximity to Mexico. Tijuana and San Diego are grouped together as an international metropolitan region since they share an international border. Many tourists go to the south for luxury spas, beachside resorts, golf courses, multicultural festivals and celebrations, vibrant neighborhoods, and nightlife.</p>
+      </div>
+
+     <section id="cards">
+     <div class="container">
+       <div class="card">
+         <div class="img">
+           <img src="images/coronado.jpg" alt="Coronado">
+         </div>
+         <div class="top-text">
+          <div class="name">Coronado</div>
+          <p></p>
+       </div>
+       <div class="bottom-text">
+         <div class="text">Known for its gorgeous beaches, Coronado Island offers a plethora of choices for fun in the sun. There are five white sand havens on the island including Coronado Central Beach, Coronado Dog Beach, Glorietta Bay Beach, Silver Strand State Beach and the Ferry Landing Marketplace.</div>
+         <div class="btn">
+           <a href="#">Read More</a>
+         </div>
+       </div>
+     </div>
+
+      <div class="card">
+         <div class="img">
+           <img src="images/balboa.jpg" alt="Coronado">
+         </div>
+         <div class="top-text">
+          <div class="name">Balboa Park</div>
+          <p></p>
+       </div>
+       <div class="bottom-text">
+         <div class="text">Always amazing. Where culture, science, and nature collide, Balboa Park is home to more than 16 museums, multiple performing arts venues, lovely gardens, trails, and many other creative and recreational attractions, including the San Diego Zoo.</div>
+         <div class="btn">
+           <a href="#">Read More</a>
+         </div>
+       </div>
+     </div>
+
+      <div class="card">
+         <div class="img">
+           <img src="images/zoo.jpg" alt="Coronado">
+         </div>
+         <div class="top-text">
+          <div class="name">San Diego Zoo</div>
+          <p></p>
+       </div>
+       <div class="bottom-text">
+         <div class="text">The zoo is home to over 3,700 rare and endangered animals representing more than 650 species and subspecies. A number of large animals are separated by moats and vegetation rather than fencing. 4. The zoo's botanic gardens are stunning</div>
+         <div class="btn">
+           <a href="#">Read More</a>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+
+      <div class="restaurants">
+        <h2>San Diego's best restaurants</h2>
+        <p>Indulge in dining destinations serving world-class fare amid stunning San Diego settings. Enjoy bayside breezes at gorgeous waterfront venues Seaport Village and The Headquarters at Seaport, or from a luxurious yacht aboard Hornblower Cruises & Events. Savor the sights, sounds and flavors of Mexico at Bazaar del Mundo Shops and Fiesta de Reyes, each colorful village marketplaces gracing San Diego’s historic Old Town. Satisfy your palate at the seaside Village Faire Restaurants & Shops in Carlsbad. Also experience fresh seafood, creative pizzas and pastas, tableside teppanyaki grilling, smokin’-hot barbecue, authentic German and Chinese fare and more tantalizing flavors on your culinary journey around the county. Bon appétit!</p>
+      </div>
+
+
+       <section id="cards">
+     <div class="container">
+       <div class="card">
+         <div class="img">
+           <img src="images/pinzimini.jpg" alt="Coronado">
+         </div>
+         <div class="top-text">
+          <div class="name">Pinzimini</div>
+          <p></p>
+       </div>
+       <div class="bottom-text">
+         <div class="text">Pinzimini adds a comfortably upscale San Diego dining experience to the vivacious Gaslamp Quarter. Both the menu and ambiance celebrate the restaurant's So Cal locale with a nod to the Baja region. Enjoy breakfast, lunch, and dinner in the newly transformed dining room, or the inviting outdoor patio.</div>
+         <div class="btn">
+           <a href="#">Read More</a>
+         </div>
+       </div>
+     </div>
+
+      <div class="card">
+         <div class="img">
+           <img src="images/grant-grill.jpg" alt="Coronado">
+         </div>
+         <div class="top-text">
+          <div class="name">Grant Grill Lounge</div>
+          <p></p>
+       </div>
+       <div class="bottom-text">
+         <div class="text">Grant Grill’s menu sets the standard for San Diego fine dining with approachable epicurean elegance, acutely focused on highlighting only the freshest of ingredients, prime meats and Pacific seafood. Breakfast, Lunch and Dinner menus elevate comfort cuisine and highlight the bounty of the Southern California region. Compliment your meal with Grant Grill’s extensive wine list and craft cocktail collection.</div>
+         <div class="btn">
+           <a href="#">Read More</a>
+         </div>
+       </div>
+     </div>
+
+      <div class="card">
+         <div class="img">
+           <img src="images/coastal.jpg" alt="Oceana coastal kitchen">
+         </div>
+         <div class="top-text">
+          <div class="name">Oceana Coastal Kitchen</div>
+          <p></p>
+       </div>
+       <div class="bottom-text">
+         <div class="text">Oceana Coastal Kitchen is the vibrant, signature restaurant inside the Catamaran Resort Hotel and Spa on San Diego’s Mission Bay. Opened in 2015, Oceana Coastal Kitchen’s cuisine embraces fresh California flavors served in a memorable waterfront setting.</div>
+         <div class="btn">
+           <a href="#">Read More</a>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>
+
+
+
+      <div class="hotels">
+        <h2>San Diego's best hotels</h2>
+        <p>There are many hotels in San Diego to choose from based on your budget, family size or vacation plans. We strongly recommend that you look into the hotels around downtown, La Jolla, Mission Bay, Coronado or Hotel Circle. These areas are not only unique to themselves, but they are close to the most popular San Diego attractions and activities. No matter what time of the year you are visiting San Diego, a hotel near the beach is definitely one of your best options especially if you have kids. As San Diego is a coastal city, most of the best things to do are in and around the beach area so book a great beach hotel in San Diego for your next big vacation!.</p>
+      </div>
+
+
+       <div class = "main-wrapper">
+            <h2>Top-rated hotels</h2>
+
+            <div class = "hotel-collection">
+                <!-- article single -->
+                <article>
+                    <div class = "img-box">
+                        <img src = "images/l-auberge-del-mar.jpg" alt = "">
+                    </div>
+
+                    <div class = "text-content">
+                        <h3>L'auberge Del Mar</h3>
+                        <div class = "rating">
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "far fa-star"></i>
+                            </span>
+                            <span>8 Rating</span>
+                        </div>
+
+                        <p>Pet-Friendly Resort. Your pets are welcome to enjoy the plush amenities at L'Auberge Del Mar.</p>
+
+                        <div class = "location">
+                            <div>
+                                <span><i class = "fas fa-map"></i></span>
+                                <span>Del Mar, San Diego</span>
+                            </div>
+                            <button type = "button">Read</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end of article single -->
+
+                <!-- article single -->
+                <article>
+                    <div class = "img-box">
+                        <img src = "images/hotel-indigo.jpg" alt = "">
+                    </div>
+
+                    <div class = "text-content">
+                        <h3>Hotel Indigo</h3>
+                        <div class = "rating">
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "far fa-star"></i>
+                            </span>
+                            <span>8 Rating</span>
+                        </div>
+
+                        <p>Hotel Indigo is a chain of boutique hotels, part of InterContinental Hotels Group.</p>
+
+                        <div class = "location">
+                            <div>
+                                <span><i class = "fas fa-map"></i></span>
+                                <span>San Diego, CA</span>
+                            </div>
+                            <button type = "button">Read</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end of article single -->
+                <!-- article single -->
+                <article>
+                    <div class = "img-box">
+                        <img src = "images/hotel-del-coronado.jpg" alt = "">
+                    </div>
+
+                    <div class = "text-content">
+                        <h3>Hotel Del Coronado</h3>
+                        <div class = "rating">
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "far fa-star"></i>
+                            </span>
+                            <span>8 Rating</span>
+                        </div>
+
+                        <p>Hotel del Coronado, also known as The Del and Hotel Del, is a historic beachfront hotel in the city of Coronado, just across the San Diego Bay from San Diego, California.</p>
+
+                        <div class = "location">
+                            <div>
+                                <span><i class = "fas fa-map"></i></span>
+                                <span>San Diego, CA</span>
+                            </div>
+                            <button type = "button">Read</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end of article single -->
+
+                <!-- article single -->
+                <article>
+                    <div class = "img-box">
+                        <img src = "images/harrah-resort-socal.jpg" alt = "">
+                    </div>
+
+                    <div class = "text-content">
+                        <h3>Harrah's Resort Socal</h3>
+                        <div class = "rating">
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "fas fa-star"></i>
+                            </span>
+                            <span>
+                                <i class = "far fa-star"></i>
+                            </span>
+                            <span>8 Rating</span>
+                        </div>
+
+                        <p>Serving as a destination resort, this bustling hotel and casino is 10.7 miles from Hellhole Canyon Preserve and 19 miles from the San Diego Zoo Safari Park.</p>
+
+                        <div class = "location">
+                            <div>
+                                <span><i class = "fas fa-map"></i></span>
+                                <span>San Diego, CA</span>
+                            </div>
+                            <button type = "button">Read</button>
+                        </div>
+                    </div>
+                </article>
+                <!-- end of article single -->
+            </div>
+        </div>
+        
+    </body>
+</html>
+
+<footer>
+        <div class="main-content">
+        <div class="left box">
+          <h2>Quick Links</h2>
+          <div class="content">
+           <a href="about.html">About</a>
+           <a href="lifestyle.html">Lifestyle</a>
+           <a href="events.html">Events</a>
+           <a href="connect with us">Connect With Us</a>
+
+            <div class="social">
+              <a href="#"><span class="fab fa-facebook-f"></span></a>
+              <a href="#"><span class="fab fa-twitter"></span></a>
+              <a href="#"><span class="fab fa-instagram"></span></a>
+              <a href="#"><span class="fab fa-youtube"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="center box">
+          <h2>Contact us</h2>
+          <div class="content">
+            <div class="place">
+              <span class="fas fa-map-marker-alt"></span>
+              <span class="text">San Diego</span>
+            </div>
+            <div class="phone">
+              <span class="fas fa-phone-alt"></span>
+              <span class="text">+089-765432100</span>
+            </div>
+            <div class="email">
+              <span class="fas fa-envelope"></span>
+              <span class="text">sandiego@california.com</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="right box">
+          <h2>Our Newsletter</h2>
+          <div class="content">
+            <form action="connect with us.html">
+              <div class="email">
+                <div class="text">Email *</div>
+                <input type="email" required>
+              </div>
+              <div class="country">
+                <div class="text">Country *</div>
+                <input type="text" required>
+              </div>
+              <div class="buttn">
+                <button type="submit">Complete</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">
+        <center>
+          <span class="credit">Created By <a href="index.html">San Diego</a> | </span>
+          <span class="far fa-copyright"></span><span> 2020 All rights reserved.</span>
+        </center>
+      </div>
+         
+            
+         
+      </footer>
+
+
+
+
+
